@@ -1,10 +1,11 @@
-
-
-
 import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+
+const bottomContainerHeight=80.0;
+const activeCardColour = Color(0xFF1D1E33);
+const bottomContainerColour = Color(0xFFEB1555);
 
 class inputPage extends StatefulWidget {
   // const inputPage({Key? key}) : super(key: key);
@@ -19,24 +20,30 @@ class _inputPageState extends State<inputPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI Calculator'),
-        backgroundColor: Color(0XFF141A3B),
+        backgroundColor: activeCardColour,
       ),
       body: Column(
             children: <Widget>[
               Expanded(child: Row(
                 children: <Widget>[
-                  Expanded(child: ReusableCard(colour: Color(0xFF1D1E33))),
-                  Expanded(child: ReusableCard(colour: Color(0xFF1D1E33))),
+                  Expanded(child: ReusableCard(colour: activeCardColour)),
+                  Expanded(child: ReusableCard(colour: activeCardColour)),
                 ],
               )),
-              Expanded(child:ReusableCard(colour: Color(0xFF1D1E33))),
+              Expanded(child:ReusableCard(colour:activeCardColour)),
               Expanded(child:Row(
               children: <Widget>[
-              Expanded(child: ReusableCard(colour: Color(0xFF1D1E33))),
-              Expanded(child: ReusableCard(colour: Color(0xFF1D1E33))),
+              Expanded(child: ReusableCard(colour: activeCardColour)),
+              Expanded(child: ReusableCard(colour: activeCardColour)),
             ],
       )
               ),
+              Container(
+                color: bottomContainerColour,
+                margin: EdgeInsets.only(top: 10.0),
+                width: double.infinity,
+                height: bottomContainerHeight,
+              )
             ],
       ),
     );
