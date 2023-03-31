@@ -1,6 +1,7 @@
 # bmicalculatorapp
 
-A flutter app to calculate the BMI and also gives general idea about custom widget creation
+A flutter app to calculate the BMI, 
+ans also to understand the general widget creation from material widget.
 
 
 ## Getting Started
